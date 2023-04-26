@@ -24,6 +24,7 @@
     let computerScore = 0;
   
     for (let i = 1; i <= 5; i++) {
+      const prompt=require("prompt-sync")({sigint:true});
       const playerSelection = prompt("Enter your choice (rock/paper/scissors):");
       const computerSelection = computerPlay();
       const result = playRound(playerSelection, computerSelection);
@@ -44,6 +45,8 @@
       console.log(`It's a tie game! Final score: ${playerScore}-${computerScore}`);
     }
   }
+
+  game()
 
   
   
