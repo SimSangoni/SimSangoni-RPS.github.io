@@ -13,7 +13,7 @@ function integers(a,b){
     }
 }
 
-integers(1,5)
+integers(15,5)
 
 
 function evenOrOdd(num){
@@ -25,4 +25,4 @@ function evenOrOdd(num){
     }
 }
 
-evenOrOdd(10)
+evenOrOdd(9)
