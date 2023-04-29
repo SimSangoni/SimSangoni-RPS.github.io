@@ -28,6 +28,7 @@
       while (!validInput) {
         //const prompt=require("prompt-sync")({sigint:true});
         playerSelection = window.prompt(`Round ${roundCount} :Enter your choice (rock/paper/scissors):`);
+        playerSelection = playerSelection.toLowerCase();
         if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
           validInput = true;
         } else {
