@@ -22,9 +22,17 @@
   function game() {
     let playerScore = 0;
     let computerScore = 0;
+    let validInput = false;
     for (let i = 1; i <= 5; i++) {
-      //const prompt=require("prompt-sync")({sigint:true});
-      const playerSelection = window.prompt("Enter your choice (rock/paper/scissors):");
+      while (!validInput) {
+        //const prompt=require("prompt-sync")({sigint:true});
+        playerSelection = window.prompt("Enter your choice (rock/paper/scissors):");
+        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+          validInput = true;
+        } else {
+          console.log("Invalid input. Please enter rock, paper, or scissors.");
+        }
+      }
       const computerSelection = computerPlay();
       const result = playRound(playerSelection, computerSelection);
       console.log(result);
