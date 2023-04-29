@@ -22,11 +22,12 @@
   function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let validInput = false;
+    let roundCount = 1;
     for (let i = 1; i <= 5; i++) {
+      let validInput = false;
       while (!validInput) {
         //const prompt=require("prompt-sync")({sigint:true});
-        playerSelection = window.prompt("Enter your choice (rock/paper/scissors):");
+        playerSelection = window.prompt(`Round ${roundCount} :Enter your choice (rock/paper/scissors):`);
         if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
           validInput = true;
         } else {
@@ -41,6 +42,7 @@
       } else if (result.startsWith("You lose!")) {
         computerScore++;
       }
+      roundCount++;
     }
     if (playerScore > computerScore) {
       console.log(`You win the game! Final score: ${playerScore}-${computerScore}`);
