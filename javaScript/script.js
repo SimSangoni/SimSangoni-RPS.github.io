@@ -23,8 +23,8 @@
     let playerScore = 0;
     let computerScore = 0;
     for (let i = 1; i <= 5; i++) {
-      const prompt=require("prompt-sync")({sigint:true});
-      const playerSelection = prompt("Enter your choice (rock/paper/scissors):");
+      //const prompt=require("prompt-sync")({sigint:true});
+      const playerSelection = window.prompt("Enter your choice (rock/paper/scissors):");
       const computerSelection = computerPlay();
       const result = playRound(playerSelection, computerSelection);
       console.log(result);
